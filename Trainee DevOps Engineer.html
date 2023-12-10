@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainee DevOps Engineer</title>
     <style>
+        /* Reset default margin and padding */
         body {
             background-color: #f8f8f8;
             display: flex;
@@ -15,6 +16,7 @@
             margin: 0;
         }
 
+        /* Container for the CV content */
         .cv-container {
             background-color: #fff;
             border: 2px solid #8a0801;
@@ -26,6 +28,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Main heading */
         h1 {
             font-family: Algerian, sans-serif;
             color: #8a0801;
@@ -33,6 +36,7 @@
             text-align: center;
         }
 
+        /* Organization information */
         .organization {
             font-family: Calibri, sans-serif;
             font-size: 125%;
@@ -41,6 +45,7 @@
             color: #8a0801;
         }
 
+        /* Location and duration details */
         .location {
             font-family: Calibri, sans-serif;
             font-size: 110%;
@@ -49,14 +54,16 @@
             color: #020a61;
         }
 
+        /* Project title styling */
         .project-title {
-            font-family: Verdana, sans-serif;
-            font-size: 160%;
-            font-style: italic;
+            font-family: 'Times New Roman', serif;
+            font-size: 180%;
             font-weight: bold;
             color: #8a0801;
+            text-align: center;
         }
 
+        /* Project duration styling */
         .project-duration {
             font-family: Verdana, sans-serif;
             font-size: 140%;
@@ -65,36 +72,28 @@
             color: #020a61;
         }
 
-        .description {
-            font-family: Verdana, sans-serif;
-            font-size: 130%;
-            font-style: italic;
-            font-weight: bold;
-            color: #020a61;
-        }
-
-        .content-text {
-            font-family: Verdana, sans-serif;
-            font-size: 120%;
-            font-style: italic;
-            color: #020a61;
-            margin-left: 20px; /* Indentation for better readability */
-        }
-
-        .achievements {
-            font-family: Verdana, sans-serif;
-            font-size: 130%;
-            font-style: italic;
-            font-weight: bold;
-            color: #020a61;
-        }
-
+        /* General description text */
+        .description,
+        .content-text,
+        .achievements,
         .tools {
             font-family: Verdana, sans-serif;
             font-size: 130%;
             font-style: italic;
             font-weight: bold;
             color: #020a61;
+        }
+
+        /* Content text indentation */
+        .content-text {
+            margin-left: 20px;
+        }
+
+        /* Achievements and tools list styles */
+        .achievements ul,
+        .tools ul {
+            list-style-type: square;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -146,6 +145,8 @@
             <li>Utilized Git for version control and artifact tracking throughout the project's lifecycle.</li>
             <li>Integrated SonarQube for code quality assurance, ensuring high-quality code.</li>
         </ul>
+
+        <br><br>
 
         <div class="tools">
             Tools used:
