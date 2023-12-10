@@ -6,114 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainee DevOps Engineer</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            background: #f4f4f4;
-            color: #020a61;
-            font-family: 'Calibri', sans-serif;
+            background-color: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cv-container {
+            background-color: #fff;
+            border: 2px solid #8a0801;
+            border-image: linear-gradient(to right, #8a0801, #020a61);
+            border-image-slice: 1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 70%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-family: 'Calibri', sans-serif;
-            font-size: 150%;
+            font-family: Algerian, sans-serif;
             color: #8a0801;
+            font-size: 250%;
             text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .content {
-            font-family: 'Calibri', sans-serif;
-            font-size: 100%;
-            margin: 20px;
         }
 
         .organization {
-            font-family: 'Calibri', sans-serif;
+            font-family: Calibri, sans-serif;
             font-size: 125%;
-            font-weight: bold;
             font-style: italic;
+            font-weight: bold;
             color: #8a0801;
         }
 
         .location {
-            font-family: 'Calibri', sans-serif;
-            font-size: 115%;
-            color: #e66d35;
-        }
-
-        .duration {
-            font-family: 'Calibri', sans-serif;
+            font-family: Calibri, sans-serif;
             font-size: 110%;
             font-style: italic;
-            color: #020a61;
             font-weight: bold;
+            color: #020a61;
         }
 
         .project-title {
             font-family: Verdana, sans-serif;
-            font-size: 105%;
-            font-weight: bold;
+            font-size: 160%;
             font-style: italic;
+            font-weight: bold;
             color: #8a0801;
         }
 
         .project-duration {
             font-family: Verdana, sans-serif;
-            font-size: 105%;
-            font-weight: bold;
+            font-size: 140%;
             font-style: italic;
+            font-weight: bold;
             color: #020a61;
         }
 
         .description {
             font-family: Verdana, sans-serif;
-            font-size: 105%;
-            font-weight: bold;
+            font-size: 130%;
             font-style: italic;
+            font-weight: bold;
             color: #020a61;
         }
 
         .content-text {
             font-family: Verdana, sans-serif;
-            font-size: 100%;
+            font-size: 120%;
             font-style: italic;
+            color: #020a61;
+            margin-left: 20px; /* Indentation for better readability */
         }
 
         .achievements {
             font-family: Verdana, sans-serif;
-            font-size: 100%;
+            font-size: 130%;
             font-style: italic;
+            font-weight: bold;
             color: #020a61;
         }
 
         .tools {
             font-family: Verdana, sans-serif;
-            font-size: 100%;
+            font-size: 130%;
             font-style: italic;
+            font-weight: bold;
             color: #020a61;
-        }
-
-        .tools-list {
-            font-family: Verdana, sans-serif;
-            font-size: 100%;
-            font-style: italic;
-            color: #020a61;
-            margin-left: 20px;
         }
     </style>
 </head>
 
 <body>
-    <div class="content">
+    <div class="cv-container">
         <h1>Trainee DevOps Engineer</h1>
 
         <div class="organization">
@@ -121,7 +108,7 @@
         </div>
 
         <div class="location">
-            April 2023 till Present (6+ Months)
+            April 2023 till Present - <span style="font-weight: bold;">(6+ Months)</span>
         </div>
 
         <div class="project-title">
@@ -137,24 +124,11 @@
         </div>
 
         <div class="content-text">
-            In this comprehensive AWS project, I led the optimization of AWS infrastructure, resulting in improved
-            performance and cost-efficiency. My responsibilities included management of EC2 instances, S3 buckets, and
-            RDS databases while implementing robust security measures. To ensure resource provisioning and access
-            control efficiency, I effectively utilized CloudFormation and IAM.
-        </div>
-
-        <div class="content-text">
-            As a Trainee DevOps Engineer, I concurrently achieved the successful deployment of a login web page on the
-            AWS platform. This encompassed activities such as setting up EC2 instances, configuring various AWS
-            services like EC2, S3, ELB, and auto-scaling, designing complex network infrastructure, and ensuring secure
-            connectivity. I proficiently employed Git and Jenkins for continuous integration (CI) and leveraged Docker
-            for efficient containerization. To maintain high code quality standards, I seamlessly integrated SonarQube
-            into our DevOps pipeline.
-        </div>
-
-        <div class="content-text">
-            During this project, I also gained knowledge of AWS CloudFront and Route 53, which further enriched my
-            skill set.
+            In this comprehensive AWS project, I led the optimization of AWS infrastructure, resulting in improved performance and cost-efficiency. My responsibilities included management of EC2 instances, S3 buckets, and RDS databases while implementing robust security measures. To ensure resource provisioning and access control efficiency, I effectively utilized CloudFormation and IAM.
+            <br>
+            As a Trainee DevOps Engineer, I concurrently achieved the successful deployment of a login web page on the AWS platform. This encompassed activities such as setting up EC2 instances, configuring various AWS services like EC2, S3, ELB, and auto-scaling, designing complex network infrastructure, and ensuring secure connectivity. I proficiently employed Git and Jenkins for continuous integration (CI) and leveraged Docker for efficient containerization. To maintain high code quality standards, I seamlessly integrated SonarQube into our DevOps pipeline.
+            <br>
+            During this project, I also gained knowledge of AWS CloudFront and Route 53, which further enriched my skill set.
         </div>
 
         <div class="achievements">
@@ -177,14 +151,8 @@
             Tools used:
         </div>
 
-        <ul class="tools-list">
-            <li>AWS (EC2, S3, RDS, IAM)</li>
-            <li>CloudFormation</li>
-            <li>Git</li>
-            <li>Jenkins</li>
-            <li>Docker</li>
-            <li>SonarQube</li>
-            <li>Linux</li>
+        <ul class="content-text">
+            <li>AWS (EC2, S3, RDS, IAM), CloudFormation, Git, Jenkins, Docker, SonarQube, Linux</li>
         </ul>
     </div>
 </body>
