@@ -24,19 +24,26 @@
         <nav>
             <h1 class="logo"><span class="N">N</span><span class="R">R</span><span class="J">J</span></h1>
             <ul>
-                <li><a href="resume.pdf" target="_blank"> Resume </a> </li>
+                <li><a href="Resume.pdf" target="_blank" onclick="highlightResume()"> Resume </a> </li>
                 <li><a href=" #"> My Profile </a> </li>
-
             </ul>
         </nav>
         <br>
         <!--<div id="header" style="float: right"></div>-->
-        <div class="header-text">
-            <p> DevOps Engineer </p>
-            <h1> Hi, I'm <div id="name">Muzzammil Shaikh</div>
-            </h1>
-        </div>
     </section>
+
+    <script>
+        function highlightResume() {
+            var resumeLink = document.querySelector('a[href="resume.pdf"]');
+            resumeLink.style.fontSize = "2em";
+            resumeLink.style.color = "blue";
+
+            setTimeout(function () {
+                resumeLink.style.fontSize = ""; // Revert to the original size
+                resumeLink.style.color = ""; // Revert to the original color
+            }, 4000); // 4 seconds
+        }
+    </script>
 
     <!-- --------About-------------->
     <div id="about">
