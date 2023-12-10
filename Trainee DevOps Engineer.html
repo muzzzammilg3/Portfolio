@@ -4,40 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Trainee DevOps Engineer - Full-stack Academy</title>
+    <title>Trainee DevOps Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #020a61;
+            font-family: 'Calibri', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Calibri', sans-serif;
+            font-size: 150%;
+            color: #8a0801;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-family: 'Calibri', sans-serif;
+            font-size: 100%;
+            margin: 20px;
+        }
+
+        .organization {
+            font-family: 'Calibri', sans-serif;
+            font-size: 125%;
+            font-weight: bold;
+            font-style: italic;
+            color: #8a0801;
+        }
+
+        .location {
+            font-family: 'Calibri', sans-serif;
+            font-size: 115%;
+            color: #e66d35;
+        }
+
+        .duration {
+            font-family: 'Calibri', sans-serif;
+            font-size: 110%;
+            font-style: italic;
+            color: #020a61;
+            font-weight: bold;
+        }
+
+        .project-title {
+            font-family: Verdana, sans-serif;
+            font-size: 105%;
+            font-weight: bold;
+            font-style: italic;
+            color: #8a0801;
+        }
+
+        .project-duration {
+            font-family: Verdana, sans-serif;
+            font-size: 105%;
+            font-weight: bold;
+            font-style: italic;
+            color: #020a61;
+        }
+
+        .description {
+            font-family: Verdana, sans-serif;
+            font-size: 105%;
+            font-weight: bold;
+            font-style: italic;
+            color: #020a61;
+        }
+
+        .content-text {
+            font-family: Verdana, sans-serif;
+            font-size: 100%;
+            font-style: italic;
+        }
+
+        .achievements {
+            font-family: Verdana, sans-serif;
+            font-size: 100%;
+            font-style: italic;
+            color: #020a61;
+        }
+
+        .tools {
+            font-family: Verdana, sans-serif;
+            font-size: 100%;
+            font-style: italic;
+            color: #020a61;
+        }
+
+        .tools-list {
+            font-family: Verdana, sans-serif;
+            font-size: 100%;
+            font-style: italic;
+            color: #020a61;
+            margin-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="content">
+        <h1>Trainee DevOps Engineer</h1>
 
-    <div class="experience-details">
-        <h2 style="font-style: italic; color: #bd0d48; font-size: 24px;">Trainee DevOps Engineer</h2>
-        <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Organization:</strong> Full-stack Academy (Hyderabad, India)</p>
-        <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Duration:</strong> April 2023 - Present (6+ Months)</p>
-        <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Designation:</strong> Trainee DevOps Engineer</p>
-
-        <div class="project-details">
-            <h3 style="font-style: italic; color: #bd0d48; font-size: 20px;">Project: AWS Infrastructure Optimization</h3>
-            <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Duration:</strong> January 2023 - March 2023</p>
-            <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Description:</strong></p>
-            <ul style="font-style: italic; color: #3498db; font-size: 18px;">
-                <li>In this comprehensive AWS project, I led the optimization of AWS infrastructure, resulting in improved performance and cost-efficiency.</li>
-                <li>My responsibilities included management of EC2 instances, S3 buckets, and RDS databases while implementing robust security measures.</li>
-                <!-- Add other project details as needed -->
-            </ul>
-
-            <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Achievements:</strong></p>
-            <ul style="font-style: italic; color: #3498db; font-size: 18px;">
-                <li>Improved AWS infrastructure performance by optimizing resource allocation.</li>
-                <li>Enhanced security through the implementation of strict IAM policies.</li>
-                <li>Reduced operational costs by right-sizing EC2 instances and implementing S3 lifecycle policies.</li>
-                <!-- Add other achievements as needed -->
-            </ul>
-
-            <p style="font-style: italic; color: #3498db; font-size: 18px;"><strong>Tools used:</strong> AWS (EC2, S3, RDS, IAM), CloudFormation, Git, Jenkins, Docker, SonarQube, Linux</p>
+        <div class="organization">
+            Full-stack Academy (Hyderabad, India)
         </div>
-    </div>
 
+        <div class="location">
+            April 2023 till Present (6+ Months)
+        </div>
+
+        <div class="project-title">
+            Project Title 1: AWS Infrastructure Optimization
+        </div>
+
+        <div class="project-duration">
+            Duration: January 2023 - March 2023
+        </div>
+
+        <div class="description">
+            Description:
+        </div>
+
+        <div class="content-text">
+            In this comprehensive AWS project, I led the optimization of AWS infrastructure, resulting in improved
+            performance and cost-efficiency. My responsibilities included management of EC2 instances, S3 buckets, and
+            RDS databases while implementing robust security measures. To ensure resource provisioning and access
+            control efficiency, I effectively utilized CloudFormation and IAM.
+        </div>
+
+        <div class="content-text">
+            As a Trainee DevOps Engineer, I concurrently achieved the successful deployment of a login web page on the
+            AWS platform. This encompassed activities such as setting up EC2 instances, configuring various AWS
+            services like EC2, S3, ELB, and auto-scaling, designing complex network infrastructure, and ensuring secure
+            connectivity. I proficiently employed Git and Jenkins for continuous integration (CI) and leveraged Docker
+            for efficient containerization. To maintain high code quality standards, I seamlessly integrated SonarQube
+            into our DevOps pipeline.
+        </div>
+
+        <div class="content-text">
+            During this project, I also gained knowledge of AWS CloudFront and Route 53, which further enriched my
+            skill set.
+        </div>
+
+        <div class="achievements">
+            Achievements:
+        </div>
+
+        <ul class="content-text">
+            <li>Improved AWS infrastructure performance by optimizing resource allocation.</li>
+            <li>Enhanced security through the implementation of strict IAM policies.</li>
+            <li>Reduced operational costs by right-sizing EC2 instances and implementing S3 lifecycle policies.</li>
+            <li>Successfully deployed a login web page on AWS, ensuring high availability and scalability.</li>
+            <li>Implemented a robust CI/CD pipeline using Jenkins, automating build and deployment processes.</li>
+            <li>Achieved containerization with Docker, enhancing deployment consistency.</li>
+            <li>Efficiently managed infrastructure configurations with Terraform.</li>
+            <li>Utilized Git for version control and artifact tracking throughout the project's lifecycle.</li>
+            <li>Integrated SonarQube for code quality assurance, ensuring high-quality code.</li>
+        </ul>
+
+        <div class="tools">
+            Tools used:
+        </div>
+
+        <ul class="tools-list">
+            <li>AWS (EC2, S3, RDS, IAM)</li>
+            <li>CloudFormation</li>
+            <li>Git</li>
+            <li>Jenkins</li>
+            <li>Docker</li>
+            <li>SonarQube</li>
+            <li>Linux</li>
+        </ul>
+    </div>
 </body>
 
 </html>
