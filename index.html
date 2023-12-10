@@ -16,73 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <title> PortFolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background: black;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            position: relative;
-        }
-
-        nav ul li a::after {
-            content: '';
-            width: 0%;
-            height: 3px;
-            background-color: rgb(248, 71, 71);
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            transition: 0.5s;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .Hero_section {
-            min-height: 100vh;
-            min-width: 100vh;
-            background-image: url("DevOps.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            padding: 10px 10px;
-        }
-
-        .logo {
-            font-size: 40px;
-            font-family: 'Zeyada', cursive;
-            padding-left: 10px;
-            color: rgb(105, 105, 105);
-        }
-    </style>
 </head>
 
 <body>
@@ -91,18 +24,18 @@
         <nav>
             <h1 class="logo"><span class="N">N</span><span class="R">R</span><span class="J">J</span></h1>
             <ul>
-                <li><a href="Resume.pdf" target="_blank" onclick="highlightResume()" style="font-size: 200%;"> Resume </a> </li>
-                <li><a href=" #" style="font-size: 200%;"> My Profile </a> </li>
+                <li><a href="Resume.pdf" target="_blank" onclick="highlightResume()" style="font-size: 150%;"> Resume
+                    </a> </li>
+                <li><a href="#" style="font-size: 150%;"> My Profile </a> </li>
             </ul>
         </nav>
         <br>
-        <!--<div id="header" style="float: right"></div>-->
     </section>
 
     <script>
         function highlightResume() {
             var resumeLink = document.querySelector('a[href="resume.pdf"]');
-            resumeLink.style.fontSize = "2em";
+            resumeLink.style.fontSize = "1.5em";
             resumeLink.style.color = "blue";
 
             setTimeout(function () {
