@@ -46,6 +46,27 @@
                 resumeLink.style.color = ""; // Revert to the original color
             }, 4000); // 4 seconds
         }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            // Remove the "active-links" class from all tab links
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-links");
+            }
+
+            // Remove the "active-tab" class from all tab contents
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+
+            // Add the "active-links" class to the clicked tab link
+            event.currentTarget.classList.add("active-links");
+
+            // Display the corresponding tab content
+            document.getElementById(tabname).classList.add("active-tab");
+        }
     </script>
 
     <!-- --------About-------------->
@@ -64,12 +85,12 @@
 
                     <div class="tab-titles">
                         <p class="tab-links active-links" onclick="opentab('skills')"> Skills </p>
-                        <p class="tab-links" onclick=" opentab('education')"> Education </p>
-                        <p class="tab-links" onclick=" opentab('projects')"> Projects </p>
+                        <p class="tab-links" onclick="opentab('education')"> Education </p>
+                        <p class="tab-links" onclick="opentab('projects')"> Projects </p>
                     </div>
 
-		    <div class="tab-contents active-tab" id="skills">
-    			<ul style="list-style-type: none; padding: 0;">
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul style="list-style-type: none; padding: 0;">
         			<li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Operating System</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Linux </span></li>
         			<li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
 			        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Databases</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Amazon RDS </span></li>
@@ -88,7 +109,7 @@
 
                     </div>
 
-                    <div class="tab-contents" id="projects">
+                    <div class="tab-contents" id="Projects">
                         <ul>
                             <li> <span>Mobitechz Website</span><br>Designed and developed a responsive website for
                                 Mobitechz using WordPress. Implemented custom themes, plugins, and optimized the website
