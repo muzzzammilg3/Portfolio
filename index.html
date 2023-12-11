@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .logo {
-            width: 15%;
+            display: none; /* Hide the logo */
         }
     </style>
 </head>
@@ -36,6 +36,21 @@
     </section>
 
     <script>
+        function opentab(tabname, event) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
         function highlightResume() {
             var resumeLink = document.querySelector('a[href="resume.pdf"]');
             resumeLink.style.fontSize = "2em";
@@ -50,48 +65,33 @@
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname) {
-            // Remove the "active-links" class from all tab links
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active-links");
-            }
-
-            // Remove the "active-tab" class from all tab contents
-            for (var i = 0; i < tabcontents.length; i++) {
-                tabcontents[i].classList.remove("active-tab");
-            }
-
-            // Add the "active-links" class to the clicked tab link
-            event.currentTarget.classList.add("active-links");
-
-            // Display the corresponding tab content
-            document.getElementById(tabname).classList.add("active-tab");
+        function redirectToDetailsPage(pageName) {
+            // Implement redirection logic here
+            // You can use window.location.href = pageName; to redirect
+            console.log("Redirecting to: " + pageName);
         }
     </script>
 
     <!-- --------About-------------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="pp.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title"> About Me</h1>
-                <p>Seeking a challenging and dynamic role that leverages my diverse background in engineering and my evolving expertise in DevOps and Cloud Engineering, including technical skills such as Linux, Python, and AWS.
-                    My experience as an HR Associate at Amazon has honed my interpersonal and support skills, making me a valuable asset to any team.
-                    I'm dedicated to driving innovation, solving problems, and working together to achieve business growth, all while highly valuing diversity and actively contributing to the ever-changing world of technology.
-                    I aspire to blend my engineering and HR experiences to create a unique and impactful career journey.</p>
-
-                <div class="tab-titles">
-                    <p class="tab-links active-links" onclick="opentab('skills', event)"> Skills </p>
-                    <p class="tab-links" onclick="opentab('education', event)"> Education </p>
-                    <p class="tab-links" onclick="opentab('projects', event)"> Projects </p>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pp.jpg">
                 </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p>Seeking a challenging and dynamic role that leverages my diverse background in engineering and my evolving expertise in DevOps and Cloud Engineering, including technical skills such as Linux, Python, and AWS. My experience as an HR Associate at Amazon has honed my interpersonal and support skills, making me a valuable asset to any team. I'm dedicated to driving innovation, solving problems, and working together to achieve business growth, all while highly valuing diversity and actively contributing to the ever-changing world of technology. I aspire to blend my engineering and HR experiences to create a unique and impactful career journey.</p>
 
-                <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills', event)"> Skills </p>
+                        <p class="tab-links" onclick="opentab('Education', event)"> Education </p>
+                        <p class="tab-links" onclick="opentab('Projects', event)"> Projects </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="Skills">
                         <ul style="list-style-type: none; padding: 0;">
-        			<li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Operating System</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Linux </span></li>
+                            <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Operating System</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Linux </span></li>
         			<li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
 			        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Databases</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Amazon RDS </span></li>
 			        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Version Control</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Git </span></li>
@@ -105,8 +105,6 @@
 			        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Monitoring Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Nagios | Cloud watch </span></li>
 			        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Programming Language</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Python </span></li>
 			</ul>
-	           </div>
-
                     </div>
 
                     <div class="tab-contents" id="Projects">
@@ -129,7 +127,7 @@
                         </ul>
                     </div>
 
-                    <div class="tab-contents" id="education">
+                    <div class="tab-contents" id="Education">
                         <ul>
                             <li> <span>Bachelor's Of Information and Technology </span> <br>Jawaharlal Nehru Technological University
                                 •  HYDERABAD, INDIA <br>(2015) </li>
@@ -153,24 +151,19 @@
                 <div class="s4">
                     <i class="fa-solid fa-file-code"></i>
                     <h3>Trainee DevOps Engineer</h3>
-                    <p>I spearheaded the optimization of AWS infrastructure, enhancing performance and cost-effectiveness. In my role as a Trainee DevOps Engineer, I successfully deployed a login web page on AWS, implementing EC2 instances, AWS services configuration, and ensuring secure connectivity.
-                        Utilizing Git, Jenkins, and Docker, I maintained high code quality and integrated AWS CloudFront and Route 53, expanding my skill set...</p>
+                    <p>I spearheaded the optimization of AWS infrastructure, enhancing performance and cost-effectiveness. In my role as a Trainee DevOps Engineer, I successfully deployed a login web page on AWS, implementing EC2 instances, AWS services configuration, and ensuring secure connectivity. Utilizing Git, Jenkins, and Docker, I maintained high code quality and integrated AWS CloudFront and Route 53, expanding my skill set...</p>
                     <button onclick="redirectToDetailsPage('TraineeDevOpsEngineerDetails.html')">Read more</button>
                 </div>
                 <div class="s4">
                     <i class="fa-solid fa-crop-simple"></i>
                     <h3>Senior HR Associate</h3>
-                    <p>Transitioned into the role of an HR Associate at Amazon Development Centre since 2021, where I focus on addressing employee inquiries and supporting payroll operations. In this capacity, I apply my meticulous attention to detail and a deep understanding of HR policies to ensure prompt and accurate responses to employee queries.
-                        I actively contribute to streamlining payroll processes and improving employee experiences.
-                        These combined experiences provide me with a comprehensive foundation, spanning across multiple fields, and equip me with valuable skills that are adaptable to various roles...</p>
+                    <p>Transitioned into the role of an HR Associate at Amazon Development Centre since 2021, where I focus on addressing employee inquiries and supporting payroll operations. In this capacity, I apply my meticulous attention to detail and a deep understanding of HR policies to ensure prompt and accurate responses to employee queries. I actively contribute to streamlining payroll processes and improving employee experiences. These combined experiences provide me with a comprehensive foundation, spanning across multiple fields, and equip me with valuable skills that are adaptable to various roles...</p>
                     <button onclick="redirectToDetailsPage('SeniorHRAssociateDetails.html')">Read more</button>
                 </div>
                 <div class="s4">
                     <i class="fa-regular fa-lightbulb"></i>
                     <h3>Civil Engineer</h3>
-                    <p>I served as a Civil Engineer, managing projects in India and Dubai, overseeing site engineering, quality control, and project management responsibilities.
-                        My responsibilities included ensuring compliance with quality standards, legal requirements, and efficient project delivery.
-                        These experiences equipped me with versatile skills in project management, problem-solving, and compliance....</p>
+                    <p>I served as a Civil Engineer, managing projects in India and Dubai, overseeing site engineering, quality control, and project management responsibilities. My responsibilities included ensuring compliance with quality standards, legal requirements, and efficient project delivery. These experiences equipped me with versatile skills in project management, problem-solving, and compliance....</p>
                     <button onclick="redirectToDetailsPage('CivilEngineerDetails.html')">Read more</button>
                 </div>
             </div>
@@ -178,40 +171,23 @@
     </div>
     <div class="contact">
         <div class="leftcontact">
-          <h1>Contact Me</h1>
-          <p><i class="fa-solid fa-paper-plane"></i> contact@neeraj.com</p>
-          <p><i class="fa-solid fa-phone"></i> 123-456-7890</p>
-          <div class="icon">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
+            <h1>Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i> contact@neeraj.com</p>
+            <p><i class="fa-solid fa-phone"></i> 123-456-7890</p>
+            <div class="icon">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
         <div class="rightcontact">
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Your Email">
-          <textarea placeholder="Message"></textarea>
-          <button class="submit">Submit</button>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Your Email">
+            <textarea placeholder="Message"></textarea>
+            <button class="submit">Submit</button>
         </div>
-      </div>
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+    </div>
 </body>
 
 </html>
