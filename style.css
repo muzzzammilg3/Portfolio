@@ -10,14 +10,14 @@ body {
     /* font-family: 'Roboto', sans-serif; */
 }
 
-.Hero_section {
-    min-height: 100vh;
-    min-width: 500vh;
-    background-image: url("DevOps.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    padding: 10px 10px;
+.Hero_section{
+min-height: 100vh;
+min-width: 100vh;
+background-image: url("DevOps.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position:center;
+padding: 10px 10px;
 }
 
 nav {
