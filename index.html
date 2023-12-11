@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <title>PortFolio</title>
+    <title> PortFolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,33 +24,26 @@
         <nav>
             <h1 class="logo"><span class="N">N</span><span class="R">R</span><span class="J">J</span></h1>
             <ul>
-                <li><a href="Resume.pdf" target="_blank" onclick="highlightResume()" style="font-size: 150%;"> Resume
-                    </a> </li>
-                <li><a href="#" style="font-size: 150%;"> My Profile </a> </li>
+                <li><a href="resume.pdf" target="_blank"> Resume </a> </li>
+                <li><a href=" #"> My Profile </a> </li>
+
             </ul>
         </nav>
         <br>
+        <!--<div id="header" style="float: right"></div>-->
+        <div class="header-text">
+            <p> Web Developer </p>
+            <h1> Hi, I'm <div id="name">Neeraj Chouhan</div>
+            </h1>
+        </div>
     </section>
 
-    <script>
-        function highlightResume() {
-            var resumeLink = document.querySelector('a[href="resume.pdf"]');
-            resumeLink.style.fontSize = "1.5em";
-            resumeLink.style.color = "blue";
-
-            setTimeout(function () {
-                resumeLink.style.fontSize = "";
-                resumeLink.style.color = "";
-            }, 4000);
-        }
-    </script>
-
-    <!-- About Section -->
+    <!-- --------About-------------->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="pp.jpg">
+                    <img src="photo.jpg">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title" style="font-family: Verdana;"> About Me</h1>
@@ -58,13 +51,12 @@
                         Seeking a challenging and dynamic role that leverages my diverse background in engineering and my evolving expertise in DevOps and Cloud Engineering, including technical skills such as Linux, Python, and AWS.
                         My experience as an HR Associate at Amazon has honed my interpersonal and support skills, making me a valuable asset to any team.
                         I'm dedicated to driving innovation, solving problems, and working together to achieve business growth, all while highly valuing diversity and actively contributing to the ever-changing world of technology.
-                        I aspire to blend my engineering and HR experiences to create a unique and impactful career journey.
-                    </p>
+                        I aspire to blend my engineering and HR experiences to create a unique and impactful career journey.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-links" onclick="openModal('skillsModal')"> Skills </p>
-                        <p class="tab-links" onclick="openModal('educationModal')"> Education </p>
-                        <p class="tab-links" onclick="openModal('projectsModal')"> Projects </p>
+                        <p class="tab-links active-links" onclick="opentab('skills')"> Skills </p>
+                        <p class="tab-links" onclick=" opentab('education')"> Education </p>
+                        <p class="tab-links" onclick=" opentab('projects')"> Projects </p>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
@@ -83,28 +75,29 @@
   			          <li style="color: #3498db; font-style: italic;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Monitoring Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 125%; color: #edd37b;">Nagios | Cloud watch </span></li>
   			          <li style="color: #3498db; font-style: italic;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Programming Language</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 125%; color: #edd37b;">Python </span></li>
 			    </ul>
-		    </div>
-			<div class="tab-contents" id="projects">
-				<ul>
-					<li> <span>Mobitechz Website</span><br>Designed and developed a responsive website for
-						Mobitechz using WordPress. Implemented custom themes, plugins, and optimized the website
-						for performance and SEO. Showcased products, services, and contact information to
-						enhance user experience. </li>
-					<li> <span>Spotify Clone </span><br>Created a web application that replicates the popular
-						music streaming platform, Spotify. Developed the user interface using HTML and CSS,
-						ensuring a visually appealing design and intuitive user experience. </li>
-					<li> <span>College Website </span> <br> Developed a website that closely resembles our
-						college website, capturing its design elements, scheme, and layout. Incorporated
-						interactive features to easily navigate and explore our campus. Included a campus map,
-						building information, and images to provide an immersive experience. Demonstrated
-						proficiency in HTML, CSS, and JavaScript to recreate the website's functionality. </li>
-					<li> <span>Personal Portfolio </span> <br>website to see how I bring creativity and
-						functionality together. From clean layouts to visually appealing designs, my portfolio
-						demonstrates my ability to create visually stunning and user-friendly websites. </li>
-				</ul>
-			</div>
-			
-			<div class="tab-contents" id="education">
+                    </div>
+
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li> <span>Mobitechz Website</span><br>Designed and developed a responsive website for
+                                Mobitechz using WordPress. Implemented custom themes, plugins, and optimized the website
+                                for performance and SEO. Showcased products, services, and contact information to
+                                enhance user experience. </li>
+                            <li> <span>Spotify Clone </span><br>Created a web application that replicates the popular
+                                music streaming platform, Spotify. Developed the user interface using HTML and CSS,
+                                ensuring a visually appealing design and intuitive user experience. </li>
+                            <li> <span>College Website </span> <br> Developed a website that closely resembles our
+                                college website, capturing its design elements, color scheme, and layout. Incorporated
+                                interactive features to easily navigate and explore our campus. Included a campus map,
+                                building information, and images to provide an immersive experience. Demonstrated
+                                proficiency in HTML, CSS, and JavaScript to recreate the website's functionality. </li>
+                            <li> <span>Personal Portfolio </span> <br>website to see how I bring creativity and
+                                functionality together. From clean layouts to visually appealing designs, my portfolio
+                                demonstrates my ability to create visually stunning and user-friendly websites. </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
 				<ul>
 					<li> <span>Bachelor's Of Information and Technology </span> <br>Jawaharlal Nehru Technological University
 						• HYDERABAD, INDIA <br>(2015) </li>
@@ -114,14 +107,13 @@
 					<li> <span>Secondary School Certificate </span><br> Gyan Sagar Vidya Niketan • Indore,
 						Madhya Pradesh <br>04/2018 <br>
 						10th passed with 72 percentage</li>
-				</ul>
-			</div>
-		</ul>
-		</div>
-	    </div>
-	</div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-	<div class="services">
+<div class="services">
 		<div class="s2">
 			<h2>Work Experience</h2>
 			<div class="s3">
@@ -190,10 +182,4 @@
 	</script>
 	</body>
 </html>
-
-
-
-
-
-
-		    
+	
