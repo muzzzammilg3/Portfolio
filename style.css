@@ -26,6 +26,33 @@ body {
     margin: 0 auto;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-col-1 {
+    flex-basis: 40%; /* Adjust the width to 40% */
+    position: relative;
+}
+
+.about-col-1 img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Adjust the maximum width for the image */
+    border-radius: 50%; /* Add a border radius for a circular image */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-col-2 {
+    flex-basis: 60%; /* Adjust the width to 60% */
+}
+
 @media (max-width: 768px) {
     /* Adjust the background size for smaller screens if needed */
     .Hero_section {
