@@ -82,83 +82,48 @@
 
     </script>
 
-    <!-- --------About-------------->
-    <div id="about">
+<!-- --------About-------------->
+<div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="pp.jpg" alt="Profile Picture">
+                <img src="photo.jpg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title"> About Me</h1>
-                <p><em style="font-size: 115%; font-style: italic;">Replace this with your introduction.</em> Replace this with more details about yourself. You can include information about your background, experiences, and career aspirations.</p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Skills', event)"> Skills </p>
-                    <p class="tab-links" onclick="opentab('Education', event)"> Education </p>
-                    <p class="tab-links" onclick="opentab('Projects', event)"> Projects </p>
-                </div>
-            </div>
+                <p>Seeking a challenging and dynamic role that leverages my diverse background in engineering and my evolving expertise in DevOps and Cloud Engineering, including technical skills such as Linux, Python, and AWS. My experience as an HR Associate at Amazon has honed my interpersonal and support skills, making me a valuable asset to any team. I'm dedicated to driving innovation, solving problems, and working together to achieve business growth, all while highly valuing diversity and actively contributing to the ever-changing world of technology. I aspire to blend my engineering and HR experiences to create a unique and impactful career journey.</p>
 
-            <div class="tab-contents active-tab" id="Skills">
-                <ul style="list-style-type: none; padding: 0;">
-                    <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Operating System</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Linux </span></li>
+                <div class="tab-titles">
+                    <p class="tab-links active-links" onclick="opentab('skills')"> Skills </p>
+                    <p class="tab-links" onclick=" opentab('education')"> Education </p>
+                    <p class="tab-links" onclick=" opentab('projects')"> Projects </p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
+                        <!-- ... (other skills entries) ... -->
+                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Code Quality Assurance</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">SonarQube </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Databases</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Amazon RDS </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Version Control</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Git </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Scripting Language</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Shell script | YAML </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Build Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Maven </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Containerization Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Docker | Kubernetes </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Application Server</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Apache Tomcat </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>CI&CD Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Jenkins </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Configure Management Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Ansible </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Code Quality Assurance</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">SonarQube </span></li>                    
-			<li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Databases</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Amazon RDS </span></li>
-                    
-     </ul>
-                <p id="Skills-content">
-                    <!-- Additional content under Skills goes here -->
-                    <!-- You can provide more details about your skills or experiences -->
-                </p>
-            </div>
+                    </ul>
+                </div>
 
-            <div class="tab-contents" id="Projects">
-                <ul>
-                        <li> <span>Mobitechz Website</span><br>Designed and developed a responsive website for
-                                Mobitechz using WordPress. Implemented custom themes, plugins, and optimized the website
-                                for performance and SEO. Showcased products, services, and contact information to
-                                enhance user experience. </li>
-                            <li> <span>Spotify Clone </span><br>Created a web application that replicates the popular
-                                music streaming platform, Spotify. Developed the user interface using HTML and CSS,
-                                ensuring a visually appealing design and intuitive user experience. </li>
-                            <li> <span>College Website </span> <br> Developed a website that closely resembles our
-                                college website, capturing its design elements,  scheme, and layout. Incorporated
-                                interactive features to easily navigate and explore our campus. Included a campus map,
-                                building information, and images to provide an immersive experience. Demonstrated
-                                proficiency in HTML, CSS, and JavaScript to recreate the website's functionality. </li>
-                            <li> <span>Personal Portfolio </span> <br>website to see how I bring creativity and
-                                functionality together. From clean layouts to visually appealing designs, my portfolio
-                                demonstrates my ability to create visually stunning and user-friendly websites. </li>
-                        </ul>
-                
-            </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <!-- ... (project entries) ... -->
+                    </ul>
+                </div>
 
-            <div class="tab-contents" id="Education">
-                <ul>
-                         <li> <span>Bachelor's Of Information and Technology </span> <br>Jawaharlal Nehru Technological University
-                                •  HYDERABAD, INDIA <br>(2015) </li>
-                            <li> <span>Higher Secondary School Certificate </span><br> Gyan Sagar Vidya Niketan •
-                                Indore, Madhya Pradesh <br>04/2020 <br>
-                                12th passed with 69 percentage</li>
-                            <li> <span>Secondary School Certificate </span><br> Gyan Sagar Vidya Niketan • Indore,
-                                Madhya Pradesh <br>04/2018<br>
-                                10th passed with 72 percentage</li>
-                        </ul>
-                    </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <!-- ... (education entries) ... -->
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Services Section -->
 <div class="services">
