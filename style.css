@@ -11,7 +11,7 @@ body {
 
 .Hero_section {
     min-height: 100vh;
-    min-width: 100vh;
+    width: 100%; /* Set the width to 100% */
     background-image: url("DevOps.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,22 +26,29 @@ body {
     margin: 0 auto;
 }
 
+#about {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    overflow: hidden;
+    font-family: 'Calibri', sans-serif; /* Change font style to Calibri */
+}
+
 .row {
     display: flex;
     justify-content: space-between;
 }
 
 .about-col-1 {
-    flex-basis: 40%; /* Adjust the width to 40% */
+    flex-basis: 30%; /* Change width to 30% */
     position: relative;
 }
 
 .about-col-1 img {
     width: 100%;
     height: auto;
-    max-width: 200px; /* Adjust the maximum width for the image */
-    border-radius: 50%; /* Add a border radius for a circular image */
-    margin: 0 auto; /* Center the image horizontally */
+    max-width: 150px; /* Adjust the maximum width for the image to 150px */
+    border-radius: 50%;
+    margin: 0 auto;
     display: block;
     position: absolute;
     left: 50%;
@@ -50,111 +57,17 @@ body {
 }
 
 .about-col-2 {
-    flex-basis: 60%; /* Adjust the width to 60% */
-}
-
-@media (max-width: 768px) {
-    /* Adjust the background size for smaller screens if needed */
-    .Hero_section {
-        background-size: contain;
-    }
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-family: 'Roboto', sans-serif;
-}
-
-.logo {
-    font-size: 40px;
-    font-family: 'Zeyada', cursive;
-    padding-left: 10px;
-    color: rgb(105, 105, 105);
-}
-
-#name {
-    display: inline;
-    color: rgb(248, 71, 71);
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    color: white;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0%;
-    height: 3px;
-    background-color: rgb(248, 71, 71);
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-.header-text {
-    margin-top: 35%;
-    font-size: 30px;
-}
-
-.header-text h1 {
-    font-size: 60px;
-    margin-top: 5px;
-    color: #fff;
-}
-
-p {
-    color: white;
-}
-
-#about {
-    padding: 70px;
-    color: bisque;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-col-1 {
-    flex-basis: 50%;
-}
-
-.about-col-1 img {
-    border-radius: 15px;
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-}
-
-.about-col-2 {
-    flex-basis: 50%;
+    flex-basis: 70%; /* Change width to 70% */
 }
 
 .sub-title {
-    font-size: 40px;
+    font-size: 46px; /* Increase font size by 15% */
     font-weight: 600;
     color: rgb(248, 71, 71);
 }
 
 .sub-title p {
-    font-size: 30px;
+    font-size: 34px; /* Increase font size by 15% */
 }
 
 .tab-titles {
@@ -164,7 +77,7 @@ p {
 
 .tab-links {
     margin-right: 40px;
-    font-size: 18px; /* Add 'px' for the font size */
+    font-size: 18px;
     font-weight: 300;
     cursor: pointer;
     position: relative;
@@ -177,7 +90,7 @@ p {
     background: rgb(248, 71, 71);
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -6px;
     transition: 0.5s;
 }
 
@@ -206,7 +119,7 @@ p {
 
 .services {
     width: 100%;
-    min-height: 100vh; /* Ensure the services section covers the viewport height */
+    min-height: 100vh;
     display: flex;
     align-items: top;
     justify-content: center;
@@ -279,7 +192,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 70vh;
-    padding: 20px; /* Adjust padding for better mobile responsiveness */
+    padding: 20px;
     background-color: #333;
     font-family: 'Roboto', sans-serif;
 }
