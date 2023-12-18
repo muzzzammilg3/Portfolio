@@ -7,6 +7,29 @@
 body {
     background: black;
     color: #fff;
+    font-size: 16px; /* Default font size for desktop */
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .sub-title {
+        font-size: 36px; /* Adjust font size for sub-title on smaller screens */
+    }
+
+    .tab-links {
+        font-size: 16px; /* Adjust font size for tab links on smaller screens */
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
 }
 
 .Hero_section {
