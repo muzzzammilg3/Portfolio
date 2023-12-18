@@ -50,78 +50,59 @@ body {
 }
 
 #about {
-    background-color: black;
-    color: #ffe4c4;
-    padding: 120px 0;
-    overflow: hidden;
-    font-family: 'Calibri', sans-serif;
-    font-size: 115%;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    padding: 70px;
+    color: bisque;
+    text-align: center; /* Center align the text within the container */
 }
 
 .about-col-1 {
+    flex-basis: 50%;
     position: relative;
     overflow: hidden;
 }
 
 .about-col-1 img {
-    width: 100%;
-    height: auto;
-    max-width: 400px; /* Increase the maximum width of the image */
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
+    border-radius: 15px;
+    height: 500px;
+    width: 500px;
     position: absolute;
-    left: 20%; /* Adjust the left position as needed */
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px rgba(181, 203, 245, 0.5), 0 0 40px rgba(181, 203, 245, 0.3), 0 0 60px rgba(181, 203, 245, 0.2); /* Glowing border effect */
+    box-shadow: 0 0 20px rgba(181, 203, 245, 0.5), 0 0 40px rgba(181, 203, 245, 0.3), 0 0 60px rgba(181, 203, 245, 0.2);
 }
 
-
-.about-col-1::before {
+/* Add a border and glowing effect to the profile picture */
+.about-col-1 img::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glowing shadow */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
     border-radius: 50%;
     z-index: -1;
 }
 
-.about-col-2 {
-    flex-basis: 100%;
-}
-
 .sub-title {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 600;
     color: rgb(248, 71, 71);
+    margin-top: 20px; /* Adjust as needed for spacing */
 }
 
 .sub-title p {
-    font-size: 34px;
-    margin-bottom: 20px; /* Add margin below the sub-title */
-}
-
-.tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .tab-links {
-    margin-right: 40px;
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
     position: relative;
+    margin-top: 20px; /* Adjust as needed for spacing */
 }
 
 .tab-links::after {
@@ -131,12 +112,8 @@ body {
     background: rgb(248, 71, 71);
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -8px;
     transition: 0.5s;
-}
-
-.tab-links.active-link::after {
-    width: 80%;
 }
 
 .tab-contents ul li {
@@ -149,52 +126,15 @@ body {
     font-size: 18px;
 }
 
-.about-sub-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px; /* Adjust as needed for spacing */
-}
-
-.skills-content,
-.education-content,
-.projects-content {
-    display: none;
-    font-family: monospace;
-    flex-basis: 100%;
-}
-
-.skills-content.active-tab,
-.education-content.active-tab,
-.projects-content.active-tab {
-    display: block;
-}
-
-.services {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    align-content: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.s2 {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
+/* Add styles for the glowing effect on active tab */
+.tab-links.active-link::after {
     width: 80%;
 }
 
-.s3 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
+/* Additional styles for the "Services" section */
 .s4 {
-    max-width: 350px;
+    height: 250px;
+    width: 350px;
     background-color: #2a2a2a;
     margin: 50px 0;
     padding: 15px;
@@ -203,6 +143,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: all 0.3s;
+    position: relative;
 }
 
 .s4:hover {
@@ -217,16 +158,28 @@ body {
 }
 
 .s4 h3 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 5px;
     color: #fff;
 }
 
 .s4 p {
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     text-align: center;
     flex-grow: 1;
+}
+
+.s4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: -1;
 }
 
 .s4 button {
@@ -238,77 +191,4 @@ body {
     cursor: pointer;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    padding: 20px;
-    background-color: #333;
-    font-family: 'Roboto', sans-serif;
-}
-
-.leftcontact {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.leftcontact h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-}
-
-.leftcontact p {
-    margin-bottom: 10px;
-}
-
-.icon {
-    margin-top: 20px;
-    margin-left: 50px;
-}
-
-.leftcontact i {
-    margin-right: 10px;
-    color: #fff;
-    font-size: 20px;
-}
-
-.leftcontact i:hover {
-    color: rgb(248, 71, 71);
-}
-
-.rightcontact {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-input[type="text"],
-textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-textarea {
-    height: 150px;
-}
-
-button.submit {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-button.submit:hover {
-    background-color: rgb(248, 71, 71);
 }
