@@ -41,38 +41,6 @@
         </nav>
     </section>
 
-<script>
-    function opentab(tabname, event) {
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-links");
-        }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-
-        event.currentTarget.classList.add("active-links");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-    // Add event listeners for clicking on tab titles
-    document.getElementById("skills").addEventListener("click", function (event) {
-        opentab('skills', event);
-    });
-
-    document.getElementById("education").addEventListener("click", function (event) {
-        opentab('education', event);
-    });
-
-    document.getElementById("projects").addEventListener("click", function (event) {
-        opentab('projects', event);
-    });
-
-</script>
-
-
 <!-- --------About-------------->
 <div id="about">
     <div class="container">
@@ -135,7 +103,7 @@
             <h3>Higher Secondary School Certificate</h3>
             <p>Gyan Sagar Vidya Niketan, Indore, Madhya Pradesh (04/2020)<br>12th passed with 69 percentage</p>
         </div>
-        <!-- Add similar blocks for other education items -->
+        
     </div>
 </div>
 		    
@@ -168,15 +136,38 @@
 </div>
 
 <script>
-    // Your existing JavaScript code
-    function redirectToDetailsPage(pageName) {
-        // Implement redirection logic here
-        // You can use window.location.href = pageName; to redirect
-        console.log("Redirecting to: " + pageName);
+    function opentab(tabname, event) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-        // Example: Redirect to the specified page
-        window.location.href = pageName;
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-links");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
     }
+
+    // Add event listeners for clicking on tab titles
+    document.getElementById("skills").addEventListener("click", function (event) {
+        opentab('skills', event);
+    });
+
+    document.getElementById("education").addEventListener("click", function (event) {
+        opentab('education', event);
+    });
+
+    document.getElementById("projects").addEventListener("click", function (event) {
+        opentab('projects', event);
+    });
+
+    // Function to highlight "Resume" link
+    document.querySelector('a[href="Resume.pdf"]').addEventListener("mouseover", function () {
+        highlightResume();
+    });
 
     // Function to highlight "Read more" button
     function highlightReadMoreButton(buttonId) {
@@ -186,36 +177,42 @@
         }
     }
 
-    // Update for Trainee DevOps Engineer
-    function redirectToDetailsPageTrainee() {
-        redirectToDetailsPage('Trainee DevOps Engineer.html');
-    }
-
     // Highlight "Read more" button in blue for Trainee DevOps Engineer
     document.addEventListener('DOMContentLoaded', function () {
         highlightReadMoreButton('readMoreTrainee');
     });
-
-    // Update for Senior HR Associate
-    function redirectToDetailsPageHR() {
-        redirectToDetailsPage('Senior HR Associate.html');
-    }
 
     // Highlight "Read more" button in blue for Senior HR Associate
     document.addEventListener('DOMContentLoaded', function () {
         highlightReadMoreButton('readMoreHR');
     });
 
-    // Update for Civil Engineer
-    function redirectToDetailsPageCivil() {
-        redirectToDetailsPage('Civil Engineer.html');
-    }
-
     // Highlight "Read more" button in blue for Civil Engineer
     document.addEventListener('DOMContentLoaded', function () {
         highlightReadMoreButton('readMoreCivil');
     });
+
+    // Your existing JavaScript code
+
+    // Additional code for highlighting "Resume" link
+    function highlightResume() {
+        var resumeLink = document.querySelector('a[href="Resume.pdf"]');
+        resumeLink.style.fontSize = "2em";
+        resumeLink.style.color = "blue";
+
+        setTimeout(function () {
+            resumeLink.style.fontSize = ""; // Revert to the original size
+            resumeLink.style.color = ""; // Revert to the original color
+        }, 4000); // 4 seconds
+    }
+
+    function redirectToDetailsPage(pageName) {
+        // Implement redirection logic here
+        // You can use window.location.href = pageName; to redirect
+        console.log("Redirecting to: " + pageName);
+    }
 </script>
+
 
 <div class="contact">
     <div class="leftcontact">
