@@ -19,6 +19,13 @@ body {
     padding: 10px 10px;
 }
 
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
     /* Adjust the background size for smaller screens if needed */
     .Hero_section {
