@@ -10,7 +10,7 @@ body {
 }
 
 .Hero_section {
-    min-height: 50vh;
+    min-height: 100vh;
     min-width: 100vh;
     background-image: url("DevOps.jpg");
     background-repeat: no-repeat;
