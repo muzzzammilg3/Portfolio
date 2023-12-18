@@ -41,53 +41,43 @@
         </nav>
     </section>
 
-    <script>
-        function opentab(tabname, event) {
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
+<script>
+    function opentab(tabname, event) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-links");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
         }
 
-        // Add this function to show/hide content under the tab
-        function toggleContent(tabId) {
-            var content = document.getElementById(tabId + "-content");
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
 
-        // Add event listeners for clicking on tab titles
-        document.getElementById("Skills").addEventListener("click", function () {
-            toggleContent("Skills");
-        });
+    // Add event listeners for clicking on tab titles
+    document.getElementById("skills").addEventListener("click", function (event) {
+        opentab('skills', event);
+    });
 
-        document.getElementById("Education").addEventListener("click", function () {
-            toggleContent("Education");
-        });
+    document.getElementById("education").addEventListener("click", function (event) {
+        opentab('education', event);
+    });
 
-        document.getElementById("Projects").addEventListener("click", function () {
-            toggleContent("Projects");
-        });
+    document.getElementById("projects").addEventListener("click", function (event) {
+        opentab('projects', event);
+    });
 
-    </script>
+</script>
 
 <!-- --------About-------------->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="photo.jpg">
+                <img src="pp.jpg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title"> About Me</h1>
