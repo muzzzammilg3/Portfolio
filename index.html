@@ -20,6 +20,17 @@
         .logo {
             display: none; /* Hide the logo */
         }
+
+        /* Resume and My Profile Sections */
+        nav ul li a {
+            color: white; /* Set text color to white */
+            font-size: 120%; /* Increase font size by 20% */
+        }
+
+        /* Read More Section */
+        #read-more {
+            color: #0945b5; /* Set text color to #0945b5 */
+        }
     </style>
 </head>
 
@@ -54,7 +65,7 @@
         function highlightResume() {
             var resumeLink = document.querySelector('a[href="resume.pdf"]');
             resumeLink.style.fontSize = "2em";
-            resumeLink.style.color = "blue";
+            resumeLink.style.color = "white";
 
             setTimeout(function () {
                 resumeLink.style.fontSize = ""; // Revert to the original size
