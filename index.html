@@ -57,47 +57,51 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
-        function highlightResume() {
-            var resumeLink = document.querySelector('a[href="Resume.pdf"]');
-            resumeLink.style.fontSize = "2em";
-            resumeLink.style.color = "white";
-
-            setTimeout(function () {
-                resumeLink.style.fontSize = ""; // Revert to the original size
-                resumeLink.style.color = ""; // Revert to the original color
-            }, 4000); // 4 seconds
+        // Add this function to show/hide content under the tab
+        function toggleContent(tabId) {
+            var content = document.getElementById(tabId + "-content");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
         }
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+        // Add event listeners for clicking on tab titles
+        document.getElementById("Skills").addEventListener("click", function () {
+            toggleContent("Skills");
+        });
 
-        function redirectToDetailsPage(pageName) {
-            // Implement redirection logic here
-            // You can use window.location.href = pageName; to redirect
-            console.log("Redirecting to: " + pageName);
-        }
+        document.getElementById("Education").addEventListener("click", function () {
+            toggleContent("Education");
+        });
+
+        document.getElementById("Projects").addEventListener("click", function () {
+            toggleContent("Projects");
+        });
+
     </script>
 
     <!-- --------About-------------->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="pp.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pp.jpg" alt="Profile Picture">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p><em style="font-size: 115%; font-style: italic;">Replace this with your introduction.</em> Replace this with more details about yourself. You can include information about your background, experiences, and career aspirations.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills', event)"> Skills </p>
+                    <p class="tab-links" onclick="opentab('Education', event)"> Education </p>
+                    <p class="tab-links" onclick="opentab('Projects', event)"> Projects </p>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title"> About Me</h1>
-                    <p><em style="font-size: 115%; font-style: italic;">Seeking a challenging and dynamic role that leverages my diverse background in engineering and my evolving expertise in DevOps and Cloud Engineering, including technical skills such as Linux, Python, and AWS.</em> My experience as an HR Associate at Amazon has honed my interpersonal and support skills, making me a valuable asset to any team. I'm dedicated to driving innovation, solving problems, and working together to achieve business growth, all while highly valuing diversity and actively contributing to the ever-changing world of technology. I aspire to blend my engineering and HR experiences to create a unique and impactful career journey.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills', event)"> Skills </p>
-                        <p class="tab-links" onclick="opentab('Education', event)"> Education </p>
-                        <p class="tab-links" onclick="opentab('Projects', event)"> Projects </p>
-                    </div>
-                </div>
+            </div>
 
-                <div class="tab-contents active-tab" id="Skills">
-                    <ul style="list-style-type: none; padding: 0;">
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Operating System</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Linux </span></li>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul style="list-style-type: none; padding: 0;">
+                    <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Operating System</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Linux </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Databases</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Amazon RDS </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Version Control</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Git </span></li>
@@ -107,15 +111,20 @@
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Application Server</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Apache Tomcat </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>CI&CD Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Jenkins </span></li>
                         <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Configure Management Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Ansible </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Code Quality Assurance</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">SonarQube </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Monitoring Tool</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Nagios | Cloud watch </span></li>
-                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Programming Language</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Python </span></li>
-                        </ul>
-                    </div>
+                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Code Quality Assurance</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">SonarQube </span></li>                    
+			<li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Cloud</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">AWS </span></li>
+                        <li style="color: #3498db;"> &bull; <span style="font-family: 'Calibri', sans-serif; font-size: 150%; color: #bd0d48;"> <strong>Databases</strong> - </span> <span style="font-family: 'Calibri', sans-serif; font-size: 100%; color: #edd37b;">Amazon RDS </span></li>
+                    
+     </ul>
+                <p id="Skills-content">
+                    <!-- Additional content under Skills goes here -->
+                    <!-- You can provide more details about your skills or experiences -->
+                </p>
+            </div>
 
-                    <div class="tab-contents" id="Projects">
-                        <ul>
-                            <li> <span>Mobitechz Website</span><br>Designed and developed a responsive website for
+            <div class="tab-contents" id="Projects">
+                <ul>
+                        <li> <span>Mobitechz Website</span><br>Designed and developed a responsive website for
                                 Mobitechz using WordPress. Implemented custom themes, plugins, and optimized the website
                                 for performance and SEO. Showcased products, services, and contact information to
                                 enhance user experience. </li>
@@ -131,11 +140,12 @@
                                 functionality together. From clean layouts to visually appealing designs, my portfolio
                                 demonstrates my ability to create visually stunning and user-friendly websites. </li>
                         </ul>
-                    </div>
+                
+            </div>
 
-                    <div class="tab-contents" id="Education">
-                        <ul>
-                            <li> <span>Bachelor's Of Information and Technology </span> <br>Jawaharlal Nehru Technological University
+            <div class="tab-contents" id="Education">
+                <ul>
+                         <li> <span>Bachelor's Of Information and Technology </span> <br>Jawaharlal Nehru Technological University
                                 •  HYDERABAD, INDIA <br>(2015) </li>
                             <li> <span>Higher Secondary School Certificate </span><br> Gyan Sagar Vidya Niketan •
                                 Indore, Madhya Pradesh <br>04/2020 <br>
